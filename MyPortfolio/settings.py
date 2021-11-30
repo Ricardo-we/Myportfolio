@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary_storage
+import cloudinary
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_app',
-    'home'
+    'home',
+    'cloudinary_storage',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -77,8 +81,12 @@ WSGI_APPLICATION = 'MyPortfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8cu83e9h10n02',
+        'USER': 'qcfbrzzblubwxp',
+        'PASSWORD': '170da75442bff1ab4a49bf440ffef51a1371b7855ef4fa8840fe8613ee177ce8',
+        'HOST': 'ec2-52-202-152-4.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
