@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTAWESOME -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- MY STYLES -->
+    <link rel="stylesheet" href="{% static 'main_app/css/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'main_app/css/base.css' %}">
+    <link rel="shortcut icon" href="{% static 'main_app/img/portafolio.png' %}" type="image/x-icon">
+    <!-- AOS LIBRARY -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h3 class="navbar-brand">RDEV</h3>
+        <button class="d-none" id="button-display-links"><i class="fas fa-bars"></i></button>
+        <ul class="links-container" id="links-container">
+            <!-- AGREGAR LINKS -->
+            <li class="nav-link" id="home-button"><a class="link" href="{% url 'Home' %}"><i class="fas fa-home"></i>  Home</a></li>
+            <li class="nav-link" id="projects-button"><button class="link"><i class="fas fa-project-diagram"></i>  Projects</button></li>
+            <li class="nav-link" id="about-me-button"><button class="link"><i class="fas fa-user-cog"></i>  About me</button></li>
+        </ul>
+    </nav>
+    {% block content %} {% endblock %}
+    <footer class="general-footer">
+        <a class="footer-link" href="https://www.facebook.com/toti.rivera.58">
+            <i style="font-size: 20px;" class="fab fa-facebook-square"></i>
+        </a>
+        <a class="footer-link" href="">
+            <i style="font-size: 20px;" class="fab fa-instagram"></i>
+        </a>
+        <a class="footer-link" href="https://github.com/Ricardo-we?tab=repositories">
+            <i style="font-size: 20px;" class="fab fa-github"></i>
+        </a>
+    </footer>
+</body>
+<script>
+    AOS.init();
+</script>
+<!-- BASIC FUNCTIONALITY JS-->
+<script src="{% static 'main_app/js/base.js' %}"></script>
+
+</html>

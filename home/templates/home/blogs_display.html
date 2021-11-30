@@ -1,0 +1,14 @@
+{% extends 'main_app/base.html' %} {% load static %} {% block title%}Blog{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'main_app/css/blog.css' %}">
+<section class="blog-links-container">
+    {% for blog in blogs %}
+    <a class="blog-link" href="{% url 'BlogView' blog.blog_title %}" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom">
+        <div class="image-container">
+            <img src="{{blog.blog_intro_image.url}}" alt="{{blog.blog_title}}" class="img-sm">
+        </div>
+        <h3 class="blog-link-title">{{blog.blog_title}}</h3>
+    </a>
+    {% endfor %}
+</section>
+
+{% endblock %}

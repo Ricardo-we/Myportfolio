@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-section {
+    margin: 6rem 0rem;
+}
+
+#progress-bar {
+    position: fixed;
+    background-color: var(--primary);
+    height: 5px;
+    width: 0%;
+}
+
+.container-welcome-section {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 0;
+    /* background-color: var(--black); */
+}
+
+.welcome-card {
+    align-self: left;
+    color: var(--white);
+    margin: 0px 30px;
+    width: 50rem;
+}
+
+.main-title {
+    text-align: left;
+    font-size: var(--h2-fz);
+    color: var(--white);
+}
+
+.text-content {
+    text-align: left;
+}
+
+
+/* PROJECT CSS */
+
+.projects-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.projects-link {
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: var(--white);
+    margin: 3rem;
+}
+
+.projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.project-image-container {
+    width: 300px;
+    height: 200px;
+}
+
+.project-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* KNOWLEDGE CSS */
+
+.my-knowladge {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.technology-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ABOUT ME SECTION */
+
+.my-blog-title {
+    text-align: center;
+    color: var(--white);
+    font-size: var(--h2-fz);
+}
+
+.about-me {
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}

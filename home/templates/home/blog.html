@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{blog_info.blog_title}}</title>
+    <link rel="stylesheet" href="{% static 'main_app/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'main_app/css/blog-view.css' %}">
+    <!-- FONTAWESOME -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS LIBRARY -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body style="background-color: white;">
+    <nav class="blog-navbar">
+        <h3 class="navbar-brand">RDEV</h3>
+        <a class="blogs-link" href="{% url 'Blog' %}"><i class="fas fa-blog"></i> Blogs</a>
+    </nav>
+    <div class="blog-info-container" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-bottom">
+        <h3 class="fz-3" style="text-align: center; ">{{blog_info.blog_title}}</h3>
+        <p class="text-content">{{blog_info.blog_intro}}</p>
+        <img src="{{blog_info.blog_intro_image.url}}" alt="">
+        <p class="text-content">{{blog_info.blog_body}}</p>
+        {% if blog_info.blog_body_image%}<img src="{{blog_info.blog_body_image.url}}" alt=""> {% endif %}
+        <p class="text-content">{{blog_info.blog_closing}}</p>
+    </div>
+    <script>
+        AOS.init()
+    </script>
+
+</body>
+
+</html>

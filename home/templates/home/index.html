@@ -1,0 +1,65 @@
+{% extends 'main_app/base.html' %} {% load static %} {% block title%}Home{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'main_app/css/home.css' %}">
+
+<!-- fade, flip zoom (-up -down -left -right) para duracion de la animación: data-aos-duration="" -->
+<div id="progress-bar"></div>
+
+<section data-aos="zoom-in" data-aos-duration="2000" class="container-welcome-section portfolio-section" data-aos-anchor-placement="top-bottom">
+    <img src="{% static 'main_app/img/developer-img.png' %}" alt="computer" class="img-xl">
+
+    <div data-aos="flip-up" data-aos-duration="2000" class="welcome-card">
+        <h2 class="main-title">Mi nombre es Ricardo Morales</h2>
+        <p class="text-content fz-1">
+            Soy un joven desarrollador de software con variados conocimientos web, desarrollo móvil y también aplicaciones de escritorio
+        </p>
+    </div>
+</section>
+
+<section class="projects-section portfolio-section" style="color: var(--white);" data-aos="zoom-in" data-aos-duration="2000" data-aos-anchor-placement="top-bottom">
+    <h2 class="main-title">My Projects</h2>
+    <div class="projects-container">
+        {% for project in projects %}
+        <a href="{{project.project_link}}" class="projects-link" data-aos="flip-right" data-aos-duration="2000">
+            <div class="project-image-container">
+                <img src="{{project.project_image.url}}" alt="{{project.project_name}}" class="project-image">
+            </div>
+            <h2 class="project-title">{{project.project_name}}</h2>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="my-knowladge portfolio-section" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-center">
+    <h2 style="color: var(--white); font-size: var(--h1-fz);">Mis conocimientos</h2>
+    <div class="container-row" data-aos="flip-down" data-aos-duration="2050">
+        <div class="technology-container">
+            <h3 style="color: var(--white); font-size: var(--h1-fz);"><i class="fab fa-html5"></i></h3>
+        </div>
+        <div class="technology-container">
+            <h3 style="color: var(--white); font-size: var(--h1-fz);"><i class="fab fa-css3-alt"></i></h3>
+        </div>
+        <div class="technology-container">
+            <h3 style="color: var(--white); font-size: var(--h1-fz);"><i class="fab fa-js-square"></i></h3>
+        </div>
+        <div class="technology-container">
+            <h3 style="color: var(--white); font-size: var(--h1-fz);"><i class="fab fa-python"></i></h3>
+        </div>
+        <div class="technology-container">
+            <h3 style="color: var(--white); font-size: var(--h2-fz);">Django</h3>
+        </div>
+        <div class="technology-container">
+            <h3 style="color: var(--white); font-size: var(--h1-fz);"><i class="fab fa-php"></i></h3>
+        </div>
+    </div>
+    <p class="text-content fz-1" style="color: var(--white); text-align: center;">
+        Estas son las tecnologias que domino, también tengo conocimientos en react, react-native y node
+    </p>
+</section>
+
+<section class="about-me portfolio-section" data-aos="flip-right" data-aos-duration="2000">
+    <h2 class="my-blog-title">Mi Blog</h2>
+    <a class="button" href="{% url 'Blog' %}">Go to blog</a>
+    <!--  -->
+</section>
+
+{% endblock %}
