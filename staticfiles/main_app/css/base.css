@@ -69,6 +69,7 @@ body {
 
 .nav-link {
     margin-right: 6px;
+    width: 7rem;
 }
 
 .link {
@@ -81,6 +82,7 @@ body {
     padding: 20px 0px;
     border: none;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .d-none {
@@ -137,6 +139,7 @@ body {
 }
 
 .container-row {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -200,6 +203,7 @@ body {
     --white: #d9e4f1;
     --light: #B1D4E0;
     --text-content-fz: 1.5rem;
+    --text-content-fz1: 1rem;
     --h1-fz: 4rem;
     --h2-fz: 3rem;
     --h3-fz: 2.5rem;

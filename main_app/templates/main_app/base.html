@@ -12,7 +12,7 @@
     <!-- MY STYLES -->
     <link rel="stylesheet" href="{% static 'main_app/css/animations.css' %}">
     <link rel="stylesheet" href="{% static 'main_app/css/base.css' %}">
-    <link rel="shortcut icon" href="{% static 'main_app/img/portafolio.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'main_app/img/rdev_icon.ico' %}" type="image/x-icon">
     <!-- AOS LIBRARY -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -25,9 +25,9 @@
         <button class="d-none" id="button-display-links"><i class="fas fa-bars"></i></button>
         <ul class="links-container" id="links-container">
             <!-- AGREGAR LINKS -->
-            <li class="nav-link" id="home-button"><a class="link" href="{% url 'Home' %}"><i class="fas fa-home"></i>  Home</a></li>
-            <li class="nav-link" id="projects-button"><button class="link"><i class="fas fa-project-diagram"></i>  Projects</button></li>
-            <li class="nav-link" id="about-me-button"><button class="link"><i class="fas fa-user-cog"></i>  About me</button></li>
+            <li class="nav-link" id="home-button"><button class="link" href="{% url 'Home' %}"><i class="fas fa-home"></i> Home</button></li>
+            <li class="nav-link" id="projects-button"><button class="link"><i class="fas fa-project-diagram"></i> Projects</button></li>
+            <li class="nav-link" id="about-me-button"><button class="link"><i class="fas fa-user-cog"></i> About me</button></li>
         </ul>
     </nav>
     {% block content %} {% endblock %}
@@ -41,6 +41,7 @@
         <a class="footer-link" href="https://github.com/Ricardo-we?tab=repositories">
             <i style="font-size: 20px;" class="fab fa-github"></i>
         </a>
+        <a class="footer-link" href="{% url 'Blog' %}"><i style="font-size: 20px;" class="fab fa-blogger-b"></i></a>
     </footer>
 </body>
 <script>

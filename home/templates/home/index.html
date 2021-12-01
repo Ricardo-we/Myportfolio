@@ -16,7 +16,7 @@
 </section>
 
 <section class="projects-section portfolio-section" style="color: var(--white);" data-aos="zoom-in" data-aos-duration="2000" data-aos-anchor-placement="top-bottom">
-    <h2 class="main-title">My Projects</h2>
+    <h2 class="main-title">Mis proyectos</h2>
     <div class="projects-container">
         {% for project in projects %}
         <a href="{{project.project_link}}" class="projects-link" data-aos="flip-right" data-aos-duration="2000">
@@ -56,10 +56,25 @@
     </p>
 </section>
 
-<section class="about-me portfolio-section" data-aos="flip-right" data-aos-duration="2000">
-    <h2 class="my-blog-title">Mi Blog</h2>
-    <a class="button" href="{% url 'Blog' %}">Go to blog</a>
-    <!--  -->
-</section>
+<div class="contact-me portfolio-section" data-aos="flip-up" data-aos-duration="2000">
+    <h3 class="main-title" style="width: 100%; text-align: center;">Contact me</h3>
+    <form action="{% url 'SendMail' %}" class="contact-form" method="POST">
+        {% csrf_token %}
+        <label for="" class="form-label">Correo</label>
+        <input type="email" class="form-input" placeholder="correo electrónico" name="gmail">
+        <label for="" class="form-label">Sujeto</label>
+        <input type="text" class="form-input" placeholder="sujeto" name="subject">
+        <label for="" class="form-label">Mensaje</label>
+        <textarea type="text" class="form-textarea" placeholder="mensaje" name="message"></textarea>
+        <button type="submit" class="button">Submit  <i class="fas fa-arrow-right"></i></button>
+    </form>
+    <input type="hidden" value="{{failed}}" id="failed">
+    <script>
+        let failed = document.getElementById('failed')
+        if (failed) {
+            swal("Good job!", "You clicked the button!", "warning");
+        }
+    </script>
+</div>
 
 {% endblock %}
