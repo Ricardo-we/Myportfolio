@@ -25,9 +25,9 @@
         <button class="d-none" id="button-display-links"><i class="fas fa-bars"></i></button>
         <ul class="links-container" id="links-container">
             <!-- AGREGAR LINKS -->
-            <li class="nav-link" id="home-button"><button class="link" href="{% url 'Home' %}"><i class="fas fa-home"></i> Home</button></li>
-            <li class="nav-link" id="projects-button"><button class="link"><i class="fas fa-project-diagram"></i> Projects</button></li>
-            <li class="nav-link" id="about-me-button"><button class="link"><i class="fas fa-user-cog"></i> About me</button></li>
+            <li class="nav-link" id="home-button"><a class="link" href="{% url 'Home' %}"><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-link" id="projects-button"><a class="link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li class="nav-link" id="about-me-button"><a class="link"><i class="fas fa-user-cog"></i> About me</a></li>
         </ul>
     </nav>
     {% block content %} {% endblock %}

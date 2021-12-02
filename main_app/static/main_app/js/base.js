@@ -1,8 +1,14 @@
 function scrollButtonControl() {
     const projectsButton = document.getElementById('projects-button');
     const aboutMeButton = document.getElementById('about-me-button');
-    projectsButton.addEventListener('click', () => window.scrollTo(0, 900))
-    aboutMeButton.addEventListener('click', () => window.scrollTo(0, 1400))
+    projectsButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        window.scrollTo(0, 900)
+    })
+    aboutMeButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        window.scrollTo(0, 1400)
+    });
 
 }
 
