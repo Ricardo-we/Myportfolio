@@ -20,12 +20,13 @@ def blog(request, blog_title):
     return render(request, 'home/blog.html', {'blog_info':blog_info})
 
 def checkMailForm(request):
-    if request.method == 'POST':
-        gmail = request.POST.get('gmail')
-        subject = request.POST.get('subject')
-        message = request.POST.get('message')
-        recipient_list = [settings.EMAIL_HOST_USER]
-        send_mail(subject, message, gmail, recipient_list)
-        return redirect('/')
-    else:
+    try:
+        if request.method == 'POST':
+            gmail = request.POST.get('gmail')
+            subject = request.POST.get('subject')
+            message = request.POST.get('message')
+            recipient_list = [settings.EMAIL_HOST_USER]
+            send_mail(subject, message, gmail, recipient_list)
+            return redirect('/')
+    except:
         return redirect('/?failed=true')

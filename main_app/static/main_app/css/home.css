@@ -12,6 +12,7 @@ body {
     background-color: var(--primary);
     height: 5px;
     width: 0%;
+    z-index: 2;
 }
 
 .container-welcome-section {

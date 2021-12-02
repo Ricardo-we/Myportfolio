@@ -68,11 +68,11 @@
         <textarea type="text" class="form-textarea" placeholder="mensaje" name="message"></textarea>
         <button type="submit" class="button">Submit  <i class="fas fa-arrow-right"></i></button>
     </form>
-    <input type="hidden" value="{{failed}}" id="failed">
+    {% if failed %}<input type="hidden" value="{{failed}}" id="failed"> {% endif %}
     <script>
         let failed = document.getElementById('failed')
-        if (failed) {
-            swal("Good job!", "You clicked the button!", "warning");
+        if (failed.value == "true") {
+            swal("Something failed", "Something went wrong sending the mail", "warning");
         }
     </script>
 </div>

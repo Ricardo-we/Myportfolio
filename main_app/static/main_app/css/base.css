@@ -3,6 +3,7 @@
     overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
+    word-wrap: break-word;
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-    width: 97%;
+    width: 100%;
     font-family: 'Bitter', serif;
     box-sizing: border-box;
     margin: 0;
@@ -190,13 +191,13 @@ body {
 
 @media screen and (max-width: 550px) {
     html {
-        font-size: 14px;
+        font-size: 13.5px;
     }
 }
 
 @media screen and(max-width: 900px) {
     html {
-        font-size: 15px;
+        font-size: 14.5px;
     }
 }
 
