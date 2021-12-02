@@ -26,7 +26,7 @@ def checkMailForm(request):
             subject = request.POST.get('subject')
             message = request.POST.get('message')
             recipient_list = [settings.EMAIL_HOST_USER]
-            send_mail(subject, message, gmail, recipient_list)
+            send_mail(subject, message, gmail, recipient_list, fail_silently=False)
             return redirect('/')
     except:
         return redirect('/?failed=true')

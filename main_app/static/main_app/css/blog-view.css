@@ -24,6 +24,7 @@
 }
 
 .blog-navbar {
+    width: 100%;
     background-color: var(--black);
     display: flex;
     flex-direction: row;

@@ -1,18 +1,21 @@
 body {
-    display: flex;
-    flex-direction: column;
-}
-
-.portfolio-section {
-    margin: 6rem 0rem;
+    overflow-x: hidden;
 }
 
 #progress-bar {
     position: fixed;
-    background-color: var(--primary);
-    height: 5px;
-    width: 0%;
-    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: var(--white);
+    height: 4px;
+    width: 10%;
+    z-index: 1;
+}
+
+.portfolio-section {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 6rem 0rem;
 }
 
 .container-welcome-section {
@@ -29,7 +32,7 @@ body {
     align-self: left;
     color: var(--white);
     margin: 0px 30px;
-    width: 50rem;
+    width: 50%;
 }
 
 .main-title {
@@ -40,7 +43,7 @@ body {
 }
 
 .text-content {
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -78,12 +81,12 @@ body {
 }
 
 .project-image-container {
-    width: 300px;
+    width: 280px;
     height: 200px;
 }
 
 .project-image {
-    width: 300px;
+    width: 280px;
     height: 200px;
     object-fit: cover;
 }
@@ -101,11 +104,12 @@ body {
 }
 
 .technology-container {
-    width: 200px;
+    width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 4rem;
 }
 
 

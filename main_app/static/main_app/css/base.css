@@ -1,25 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&display=swap');
 * {
-    overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
     word-wrap: break-word;
 }
 
 html {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 body {
     width: 100%;
     font-family: 'Bitter', serif;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     background-color: var(--black);
-    /* background-image: url('/static/main_app/img/background-image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -53,7 +51,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     background-color: var(--black);
     z-index: 1;
 }
@@ -76,7 +74,7 @@ body {
 
 .nav-link {
     margin-right: 6px;
-    width: 7rem;
+    width: 33%;
 }
 
 .link {
@@ -121,11 +119,12 @@ body {
 
 .button {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 10px;
     font-weight: bolder;
-    align-self: flex-end;
+    align-self: center;
     text-align: center;
     cursor: pointer;
     background-color: var(--primary);
@@ -191,13 +190,13 @@ body {
 
 @media screen and (max-width: 550px) {
     html {
-        font-size: 13.5px;
+        font-size: 12.5px;
     }
 }
 
 @media screen and(max-width: 900px) {
     html {
-        font-size: 14.5px;
+        font-size: 13.5px;
     }
 }
 
