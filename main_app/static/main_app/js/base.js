@@ -60,8 +60,8 @@ function progressBar() {
         let scrollBottom = scrollTop + (scrollTop / 2);
         let totalScrollHeight = document.documentElement.scrollHeight;
         let scrollPorcentage = Math.round((scrollBottom / totalScrollHeight) * 100);
-        if (scrollPorcentage >= 100) {
-            scrollPorcentage = 100;
+        if (scrollPorcentage >= 99) {
+            scrollPorcentage = 98.5;
         }
         progressBar.style.width = scrollPorcentage + "%";
     });
