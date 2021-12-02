@@ -10,11 +10,10 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 97%;
     font-family: 'Bitter', serif;
     box-sizing: border-box;
     margin: 0;
-    overflow-x: hidden;
     background-color: var(--black);
     /* background-image: url('/static/main_app/img/background-image.jpg');
     background-repeat: no-repeat;
