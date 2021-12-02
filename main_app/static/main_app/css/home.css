@@ -8,7 +8,7 @@ body {
     top: 0;
     background-color: var(--white);
     height: 4px;
-    width: 10%;
+    width: 0%;
     z-index: 1;
 }
 
