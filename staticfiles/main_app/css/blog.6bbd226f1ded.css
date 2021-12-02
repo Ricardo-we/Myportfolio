@@ -1,0 +1,35 @@
+.blog-links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.blog-link {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    background-color: rgb(29, 28, 28);
+}
+
+.image-container {
+    width: 95%;
+    height: 55%;
+    background-color: var(--black);
+    margin-bottom: 0;
+}
+
+.blog-link-title {
+    margin-top: 0;
+    color: var(--white);
+    font-size: var(--h3-fz);
+    background-color: rgb(29, 28, 28);
+    width: 100%;
+    text-align: center;
+}
