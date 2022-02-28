@@ -3,32 +3,37 @@
 
 <!-- fade, flip zoom (-up -down -left -right) para duracion de la animación: data-aos-duration="" -->
 <div id="progress-bar"></div>
-<section data-aos="zoom-in" data-aos-duration="2000" class="container-welcome-section portfolio-section" data-aos-anchor-placement="top-bottom">
+
+<section data-aos="zoom-in" data-aos-duration="2000" class="container-welcome-section portfolio-section"
+    data-aos-anchor-placement="top-bottom">
     <img src="{% static 'main_app/img/developer-img.png' %}" alt="computer" class="img-xl">
 
     <div data-aos="flip-up" data-aos-duration="2000" class="welcome-card">
         <h2 class="main-title">Mi nombre es Ricardo Morales</h2>
         <p class="text-content fz-1">
-            Soy un joven desarrollador de software con variados conocimientos web, desarrollo móvil y también aplicaciones de escritorio
+            Soy un joven desarrollador de software con variados conocimientos web, desarrollo móvil y también
+            aplicaciones de escritorio
         </p>
     </div>
 </section>
 
-<section class="projects-section portfolio-section" style="color: var(--white);" data-aos="zoom-in" data-aos-duration="2000" data-aos-anchor-placement="top-bottom">
+<section class="projects-section portfolio-section" style="color: var(--white);" data-aos="zoom-in"
+    data-aos-duration="2000" data-aos-anchor-placement="top-bottom">
     <h2 class="main-title">Mis proyectos</h2>
     <div class="projects-container">
         {% for project in projects %}
-        <a href="{{project.project_link}}" class="projects-link" data-aos="flip-right" data-aos-duration="2000">
-            <div class="project-image-container">
-                <img src="{{project.project_image.url}}" alt="{{project.project_name}}" class="project-image">
-            </div>
-            <h2 class="project-title">{{project.project_name}}</h2>
-        </a>
+            <a href="{{project.project_link}}" class="projects-link" data-aos="flip-right" data-aos-duration="2000">
+                <div class="project-image-container">
+                    <img src="{{project.project_image.url}}" alt="{{project.project_name}}" class="project-image">
+                </div>
+                <h2 class="project-title">{{project.project_name}}</h2>
+            </a>
         {% endfor %}
     </div>
 </section>
 
-<section class="my-knowladge portfolio-section" data-aos="flip-left" data-aos-duration="2000" data-aos-anchor-placement="top-center">
+<section class="my-knowladge portfolio-section" data-aos="flip-right" data-aos-duration="2000"
+    data-aos-anchor-placement="top-center">
     <h2 style="color: var(--white); font-size: var(--h1-fz);">Mis conocimientos</h2>
     <div class="container-row" data-aos="flip-down" data-aos-duration="2050">
         <div class="technology-container">
@@ -49,9 +54,12 @@
         <div class="technology-container">
             <h3 style="color: var(--white); font-size: var(--h1-fz);"><i class="fab fa-php"></i></h3>
         </div>
+        <div class="technology-container">
+            <h3 style="color: var(--white); font-size: var(--h1-fz);"><i class="fab fa-node-js"></i></h3>
+        </div>
     </div>
     <p class="text-content fz-1" style="color: var(--white); text-align: center;">
-        Estas son las tecnologias que domino, también tengo conocimientos en react, react-native y node
+        Tengo multiples conocimientos tanto para frontend y backend conozco multiples tecnologías entre ellas php, nodejs, django, flask, mysql, postgres, javascript, html, css, react, flask
     </p>
 </section>
 
@@ -65,7 +73,7 @@
         <input type="text" class="form-input" placeholder="sujeto" name="subject">
         <label for="" class="form-label">Mensaje</label>
         <textarea type="text" class="form-textarea" placeholder="mensaje" name="message"></textarea>
-        <button type="submit" class="button">Submit  <i class="fas fa-arrow-right"></i></button>
+        <button type="submit" class="button">Submit <i class="fas fa-arrow-right"></i></button>
     </form>
     {% if failed %}<input type="hidden" value="{{failed}}" id="failed"> {% endif %}
     <script>
@@ -75,5 +83,4 @@
         }
     </script>
 </div>
-
 {% endblock %}

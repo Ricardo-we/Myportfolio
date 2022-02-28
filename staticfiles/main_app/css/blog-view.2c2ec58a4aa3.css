@@ -1,0 +1,39 @@
+.body {
+    background-color: white;
+    font-family: 'Bitter', serif;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--black);
+}
+
+.blog-info-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.text-content {
+    color: var(--black);
+    font-weight: bolder;
+    font-size: var(--text-content-fz);
+}
+
+.blog-navbar {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blogs-link {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding-right: 10px;
+}

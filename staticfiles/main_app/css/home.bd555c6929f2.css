@@ -1,21 +1,17 @@
 body {
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-section {
+    margin: 6rem 0rem;
 }
 
 #progress-bar {
     position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--white);
-    height: 4px;
-    width: 0;
-    z-index: 1000;
-}
-
-.portfolio-section {
-    width: 90%;
-    overflow-x: hidden;
-    margin: 6rem auto;
+    background-color: var(--primary);
+    height: 5px;
+    width: 0%;
 }
 
 .container-welcome-section {
@@ -32,7 +28,7 @@ body {
     align-self: left;
     color: var(--white);
     margin: 0px 30px;
-    width: 50%;
+    width: 50rem;
 }
 
 .main-title {
@@ -43,7 +39,7 @@ body {
 }
 
 .text-content {
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -81,12 +77,12 @@ body {
 }
 
 .project-image-container {
-    width: 280px;
+    width: 300px;
     height: 200px;
 }
 
 .project-image {
-    width: 280px;
+    width: 300px;
     height: 200px;
     object-fit: cover;
 }
@@ -104,13 +100,11 @@ body {
 }
 
 .technology-container {
-    width: 180px;
-    /* height: 180px; */
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem;
 }
 
 
@@ -134,13 +128,12 @@ body {
 /* CONTACT FORM */
 
 .contact-me {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 auto;
 }
 
 .contact-form {

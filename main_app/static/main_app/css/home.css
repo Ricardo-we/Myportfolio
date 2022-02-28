@@ -4,18 +4,18 @@ body {
 
 #progress-bar {
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     background-color: var(--white);
     height: 4px;
     width: 0;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .portfolio-section {
-    width: 100%;
+    width: 90%;
     overflow-x: hidden;
-    margin: 6rem 0rem;
+    margin: 6rem auto;
 }
 
 .container-welcome-section {
@@ -104,7 +104,8 @@ body {
 }
 
 .technology-container {
-    width: 160px;
+    width: 180px;
+    /* height: 180px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,12 +134,13 @@ body {
 /* CONTACT FORM */
 
 .contact-me {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .contact-form {

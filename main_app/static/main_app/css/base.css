@@ -150,7 +150,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    flex-shrink: initial;
+    flex-shrink: initialz;
     flex-wrap: wrap;
 }
 

@@ -150,7 +150,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    flex-shrink: initialz;
+    flex-shrink: initial;
     flex-wrap: wrap;
 }
 
@@ -194,17 +194,17 @@ body {
     }
     .img-sm {
         width: 200px;
-        height: 200px;
+        height: 250px;
         object-fit: cover;
     }
     .img-md {
         width: 300px;
-        height: 300px;
+        height: 400px;
         object-fit: cover;
     }
     .img-xl {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 450px;
         object-fit: cover;
     }
 }
@@ -214,18 +214,18 @@ body {
         font-size: 13.5px;
     }
     .img-sm {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         object-fit: cover;
     }
     .img-md {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
         object-fit: cover;
     }
     .img-xl {
-        width: 400px;
-        height: 400px;
+        width: 450px;
+        height: 450px;
         object-fit: cover;
     }
 }

@@ -1,23 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&display=swap');
-* {
-    box-sizing: border-box;
-    margin: 0;
-    word-wrap: break-word;
-}
-
 html {
-    font-size: 15px;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
-    width: 100%;
     font-family: 'Bitter', serif;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     margin: 0;
-    background-color: var(--black);
     overflow-x: hidden;
+    background-color: var(--black);
+    /* background-image: url("/static/main_app/img/background-image.17ada99ee754.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
 }
 
 .navbar {
@@ -51,7 +47,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     background-color: var(--black);
     z-index: 1;
 }
@@ -74,7 +70,7 @@ body {
 
 .nav-link {
     margin-right: 6px;
-    width: 33%;
+    width: 7rem;
 }
 
 .link {
@@ -119,12 +115,11 @@ body {
 
 .button {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 10px;
     font-weight: bolder;
-    align-self: center;
+    align-self: flex-end;
     text-align: center;
     cursor: pointer;
     background-color: var(--primary);
@@ -150,7 +145,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    flex-shrink: initialz;
+    flex-shrink: initial;
     flex-wrap: wrap;
 }
 
@@ -190,43 +185,13 @@ body {
 
 @media screen and (max-width: 550px) {
     html {
-        font-size: 12.5px;
-    }
-    .img-sm {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-    }
-    .img-md {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-    }
-    .img-xl {
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
+        font-size: 14px;
     }
 }
 
 @media screen and(max-width: 900px) {
     html {
-        font-size: 13.5px;
-    }
-    .img-sm {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-    }
-    .img-md {
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
-    }
-    .img-xl {
-        width: 400px;
-        height: 400px;
-        object-fit: cover;
+        font-size: 15px;
     }
 }
 
