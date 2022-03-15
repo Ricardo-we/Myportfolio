@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Bitter', serif;
     word-wrap: break-word;
 }
 
@@ -11,13 +12,17 @@ html {
 
 body {
     width: 100%;
-    font-family: 'Bitter', serif;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: 0;
     background-color: var(--black);
     overflow-x: hidden;
+}
+
+.d-none {
+    display: none;
 }
 
 .navbar {
@@ -42,46 +47,49 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 50%;
 }
 
 .links-container-phone {
     text-decoration: none;
     list-style: none;
-    width: 100%;
+    background-color: #0a0708b3;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    background-color: var(--black);
-    z-index: 1;
+    align-items: flex-start;
+    position: fixed;
+    left: -600px;
+    top: 0;
+    overflow: hidden;
+    font-size: 22px;
+    text-overflow: clip;
+    transition: 500ms;
+    z-index: 10000;
 }
 
-.forward-transition {
-    animation: nav-link-display-transition 0.5s forwards;
-}
-
-.backward-transition {
-    animation: nav-link-display-transition-backwards 0.4s forwards;
+.links-container-phone-open{
+    left: 0px;
 }
 
 #button-display-links {
     color: var(--white);
-    font-size: var(--text-content-fz);
+    font-size: 23px;
     background-color: var(--black);
     border: none;
     cursor: pointer;
+
 }
 
 .nav-link {
     margin-right: 6px;
-    width: 33%;
+    width: 150px;
 }
 
 .link {
     display: inline-block;
     background-color: var(--web-theme);
     color: var(--white);
-    font-size: 1rem;
     text-decoration: none;
     width: 100%;
     padding: 20px 0px;
@@ -189,9 +197,6 @@ body {
 }
 
 @media screen and (max-width: 550px) {
-    html {
-        font-size: 12.5px;
-    }
     .img-sm {
         width: 200px;
         height: 200px;
@@ -210,9 +215,6 @@ body {
 }
 
 @media screen and(max-width: 900px) {
-    html {
-        font-size: 13.5px;
-    }
     .img-sm {
         width: 300px;
         height: 300px;
@@ -240,7 +242,7 @@ body {
     --light: #B1D4E0;
     --text-content-fz: 1.5rem;
     --text-content-fz1: 1rem;
-    --h1-fz: 4rem;
-    --h2-fz: 3rem;
-    --h3-fz: 2.5rem;
+    --h1-fz: 3.5rem;
+    --h2-fz: 2.5rem;
+    --h3-fz: 2rem;
 }

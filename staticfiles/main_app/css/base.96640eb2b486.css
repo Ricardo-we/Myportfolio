@@ -2,7 +2,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Bitter', serif;
     word-wrap: break-word;
 }
 
@@ -12,17 +11,13 @@ html {
 
 body {
     width: 100%;
+    font-family: 'Bitter', serif;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 0;
     background-color: var(--black);
     overflow-x: hidden;
-}
-
-.d-none {
-    display: none;
 }
 
 .navbar {
@@ -52,33 +47,28 @@ body {
 .links-container-phone {
     text-decoration: none;
     list-style: none;
-    background-color: #0a0708b3;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    left: -600px;
-    top: 0;
-    overflow: hidden;
-    font-size: 22px;
-    text-overflow: clip;
-    transition: 500ms;
-    z-index: 10000;
+    position: absolute;
+    background-color: var(--black);
+    z-index: 1;
 }
 
-.links-container-phone-open{
-    left: 0px;
+.forward-transition {
+    animation: nav-link-display-transition 0.5s forwards;
+}
+
+.backward-transition {
+    animation: nav-link-display-transition-backwards 0.4s forwards;
 }
 
 #button-display-links {
     color: var(--white);
-    font-size: 23px;
+    font-size: var(--text-content-fz);
     background-color: var(--black);
     border: none;
     cursor: pointer;
-
 }
 
 .nav-link {
@@ -90,6 +80,7 @@ body {
     display: inline-block;
     background-color: var(--web-theme);
     color: var(--white);
+    font-size: 1rem;
     text-decoration: none;
     width: 100%;
     padding: 20px 0px;
@@ -197,6 +188,9 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+    html {
+        font-size: 12.5px;
+    }
     .img-sm {
         width: 200px;
         height: 200px;
@@ -215,6 +209,9 @@ body {
 }
 
 @media screen and(max-width: 900px) {
+    html {
+        font-size: 13.5px;
+    }
     .img-sm {
         width: 300px;
         height: 300px;
@@ -242,7 +239,7 @@ body {
     --light: #B1D4E0;
     --text-content-fz: 1.5rem;
     --text-content-fz1: 1rem;
-    --h1-fz: 3.5rem;
-    --h2-fz: 2.5rem;
-    --h3-fz: 2rem;
+    --h1-fz: 4rem;
+    --h2-fz: 3rem;
+    --h3-fz: 2.5rem;
 }
