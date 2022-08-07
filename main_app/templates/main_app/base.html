@@ -8,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FONTAWESOME -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- MY STYLES -->
-    <link rel="stylesheet" href="{% static 'main_app/css/animations.css' %}">
     <link rel="stylesheet" href="{% static 'main_app/css/base.css' %}">
     <link rel="shortcut icon" href="{% static 'main_app/img/rdev_icon.ico' %}" type="image/x-icon">
     <!-- AOS LIBRARY -->
@@ -24,32 +25,40 @@
 <body>
     <nav class="navbar">
         <h3 class="navbar-brand">RDEV</h3>
-        <button class="d-none" id="button-display-links"><i class="fas fa-bars"></i></button>
+        <button class="d-none" id="button-display-links">
+            <i class="fas fa-bars" style="font-size: 25px;"></i>
+        </button>
         <ul class="links-container" id="home-links">
             <!-- AGREGAR LINKS -->
             <li class="nav-link" id="home-button">
-                <a class="link" href="{% url 'Home' %}"><i class="fas fa-home"></i> Home</a>
+                <a class="link" href="{% url 'Home' %}">
+                    <i class="fas fa-home" style="margin-right: 10px"></i> Sobre mí
+                </a>
             </li>
             <li class="nav-link" id="projects-button">
-                <a class="link" href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a class="link" href="#projects">
+                    <i class="fas fa-project-diagram" style="margin-right: 10px"></i> Mis proyectos
+                </a>
             </li>
             <li class="nav-link" id="about-me-button">
-                <a class="link" href="#about-me"><i class="fas fa-user-cog"></i> About me</a>
+                <a class="link" href="#about-me">
+                    <i class="fas fa-user-cog" style="margin-right: 10px"></i> Mis conocimientos
+                </a>
             </li>
         </ul>
     </nav>
     {% block content %} {% endblock %}
     <footer class="general-footer">
         <a class="footer-link" href="https://www.facebook.com/toti.rivera.58">
-            <i style="font-size: 20px;" class="fab fa-facebook-square"></i>
+            <i style="font-size: 25px;" class="fab fa-facebook-square"></i>
         </a>
         <a class="footer-link" href="">
-            <i style="font-size: 20px;" class="fab fa-instagram"></i>
+            <i style="font-size: 25px;" class="fab fa-instagram"></i>
         </a>
         <a class="footer-link" href="https://github.com/Ricardo-we?tab=repositories">
-            <i style="font-size: 20px;" class="fab fa-github"></i>
+            <i style="font-size: 25px;" class="fab fa-github"></i>
         </a>
-        <a class="footer-link" href="{% url 'Blog' %}"><i style="font-size: 20px;" class="fab fa-blogger-b"></i></a>
+        <!-- <a class="footer-link" href="{% url 'Blog' %}"><i style="font-size: 20px;" class="fab fa-blogger-b"></i></a> -->
     </footer>
 </body>
 <script>

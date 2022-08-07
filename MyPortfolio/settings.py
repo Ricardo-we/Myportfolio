@@ -14,7 +14,9 @@ import os
 import django_heroku
 import cloudinary_storage
 import cloudinary
+from dotenv import load_dotenv
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8pdogs6#&mu9!0#_jbq*s!72$2dg2wvpi99myin=^y4ty_i!#e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['djangoproyectocompleto.herokuapp.com', '127.0.0.1']
 
@@ -83,10 +85,10 @@ WSGI_APPLICATION = 'MyPortfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd8cu83e9h10n02',
-        'USER': 'qcfbrzzblubwxp',
-        'PASSWORD': '170da75442bff1ab4a49bf440ffef51a1371b7855ef4fa8840fe8613ee177ce8',
-        'HOST': 'ec2-52-202-152-4.compute-1.amazonaws.com',
+        'NAME': os.environ.get("DB_NAME"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'HOST': os.environ.get("DB_HOST"),
         'PORT': '5432'
     }
 }
@@ -129,7 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 # STATIC
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'main_app', 'static',
+                           "main_app") if DEBUG else os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'main_app', 'static', "main_app")
 django_heroku.settings(locals())
 
 # MEDIA
@@ -148,9 +152,9 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # EMAIL CONFIG
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = '587'
-# EMAIL_HOST_USER = 'ricardo0406dev@gmail.com'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST_PASSWORD = 'kari0406'
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = True
