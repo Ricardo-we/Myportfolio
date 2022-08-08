@@ -16,7 +16,6 @@ def home(request):
             return render(request, 'home/index.html', {'projects': projects, "knowledges": knowledges, 'failed': failed})
         return render(request, 'home/index.html', {'projects': projects, "knowledges": knowledges})
     except Exception as e:
-        print("error", e)
         return "<h2>Failed</h2>"
 
 
