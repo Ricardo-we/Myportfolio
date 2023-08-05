@@ -93,6 +93,11 @@ body {
   transform: rotateY(180deg);
 }
 
+.projects-link:active .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
 .project-front,
 .project-back {
   position: absolute;

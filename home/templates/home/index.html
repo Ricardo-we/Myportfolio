@@ -20,8 +20,9 @@
   <div data-aos="flip-up" data-aos-duration="1000" class="welcome-card">
     <h2 class="main-title">Mi nombre es Ricardo Morales</h2>
     <p class="text-content fz-1">
-      Soy un joven desarrollador de software con un amplio conocimiento en tecnologías web, tanto frontend cómo backend.
-      <br>
+      Soy un joven desarrollador de software con un amplio conocimiento en
+      tecnologías web, tanto frontend cómo backend.
+      <br />
       Actualmente estudio la carrera de ingeniería en sistemas.
     </p>
   </div>
@@ -38,12 +39,7 @@
   <h2 class="main-title">Mis proyectos</h2>
   <div class="projects-container">
     {% for project in projects %}
-    <a
-      href="{{project.project_link}}"
-      class="projects-link"
-      data-aos="flip-right"
-      data-aos-duration="1000"
-    >
+    <div class="projects-link" data-aos="flip-right" data-aos-duration="1000">
       <div class="flip-card-inner">
         <div class="project-front">
           <img
@@ -53,12 +49,16 @@
           />
         </div>
 
-        <div  class="project-back">
+        <div class="project-back">
           <h2 class="project-title">{{project.project_name}}</h2>
           <p class="project-description">{{project.project_description}}</p>
+
+          <a href="{{project.project_link}}" class="b-button b-button-outlined" style="min-width: 60px;margin-top: 10px;border: 1px white solid;">
+            Ver
+          </a>
         </div>
       </div>
-    </a>
+    </div>
     {% endfor %}
   </div>
 </section>
@@ -70,9 +70,7 @@
   data-aos-duration="1000"
   data-aos-anchor-placement="top-center"
 >
-  <h2 style="text-overflow: clip;" class="main-title">
-    Mis conocimientos
-  </h2>
+  <h2 style="text-overflow: clip" class="main-title">Mis conocimientos</h2>
   <div class="container-row" data-aos="flip-down" data-aos-duration="1000">
     {% for knowledge in knowledges %}
     <div class="technology-container">
