@@ -16,7 +16,8 @@ def home(request):
             return render(request, 'home/index.html', {'projects': projects, "knowledges": knowledges, 'failed': failed})
         return render(request, 'home/index.html', {'projects': projects, "knowledges": knowledges})
     except Exception as e:
-        return "<h2>Failed</h2>"
+        print("hey",e)
+        return HttpResponse("<h2>Failed</h2>")
 
 
 def blogs_display(request):

@@ -2,6 +2,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 	font-family: "Bitter", serif;
 	word-wrap: break-word;
 }
@@ -17,7 +18,7 @@ body {
 	flex-direction: column;
 	flex-wrap: wrap;
 	margin: 0;
-	background-color: var(--black);
+	background-color: var(--black-extra);
 	overflow-x: hidden;
 }
 
@@ -33,6 +34,9 @@ body {
 	align-items: center;
 	padding: 10px;
 	background-color: var(--black);
+	position: fixed;
+	z-index: 800;
+	
 }
 
 .navbar-brand {
@@ -244,7 +248,8 @@ body {
 	--secondary: #2e8bc0;
 	--dark: #0c2d48;
 	--gray: #444b5af6;
-	--black: #101010;
+	--black-extra: #111010;
+	--black: #2b2929;
 	--white: #ffffff;
 	--light: #b1d4e0;
 	--text-content-fz: 1.5rem;
