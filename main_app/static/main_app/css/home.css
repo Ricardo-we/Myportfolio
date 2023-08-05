@@ -47,10 +47,17 @@ body {
   text-align: center;
   font-size: var(--h2-fz);
   color: var(--white);
+  text-overflow: ellipsis;
 }
 
 .text-content {
   text-align: center;
+  font-size: var(--text-content-fz1);
+}
+
+.text-content-sm {
+  text-align: center;
+  font-size: var(--text-content-fz2);
 }
 
 /* PROJECT CSS */
@@ -150,7 +157,7 @@ body {
 .my-knowladge {
   width: 80%;
   padding: 30px;
-  gap: 160px;
+  gap: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -160,7 +167,7 @@ body {
 
 .technology-container {
   min-width: 200px;
-  max-width: 350px;
+  max-width: 300px;
   min-height: 200px;
   max-height: 400px;
   flex-wrap: wrap;
