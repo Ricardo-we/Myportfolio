@@ -8,7 +8,7 @@ from django.conf import settings
 
 def home(request):
     try:
-        return redirect("https://rdev-portfolio.netlify.app")
+        return redirect("https://rdevportfolio.onrender.com/en/")
         projects = Projects.objects.all().order_by("id")
         knowledges = Knowledge.objects.all().order_by("id")
 
